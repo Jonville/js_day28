@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test1"><a href="https://daum.net">다음 ㄱㄱ</a></div>
+    <br>
+    <button id="change">네이버로 바꾸기</button>
+
+</body>
+</html>
+
+<script>
+
+    var change = document.getElementById("change");
+    change.onclick = function() {
+        var test1 = document.getElementById("test1");
+        test1.innerHTML = "<a href='https://naver.com'>네이버 ㄱㄱ <a>"
+        change.innerHTML = "다음으로 바꾸기";
+    }
+    
+</script>

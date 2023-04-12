@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-size: 2em;
+            text-align: center;
+            margin-top:  100px;
+        }
+        span {
+            color: blue;
+            font-size: 2.1em;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div id="temp">현재 시간 : <span id="current"></span></div>
+    <button onclick="javascript:window.close()"> 닫기 </button>
+
+</body>
+</html>
+
+<script>
+
+setInterval(timeDisplay, 1000); /*timeDisplay 괄호빼줌*/      /*1초에 한번씩 반복함*/
+
+    function timeDisplay(){
+        var date = new Date();
+        var time = date.toLocaleTimeString();
+        document.querySelector("#current").innerHTML = time;
+    }
+
+   
+    // console.log(document.querySelector("#current").innerHTML);
+    // document.querySelector("#current").innerHTML = "zzzzzzz";
+
+</script>

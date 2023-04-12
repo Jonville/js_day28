@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+ 
+    </style>
+
+</head>
+<body id="body">
+    
+    <h1 id="test">버튼 테스트</h1>
+
+    <input type="button" id="bc" value="배경 색 변경">
+    <input type="button" id="fc" value="글자 색 변경">
+    <input type="button" id="fs" value="글자 크기 변경">
+
+</body>
+</html>
+
+<script>
+    var bc = document.querySelector("#bc");
+    var fc = document.querySelector("#fc");
+    var fs = document.querySelector("#fs");
+
+
+    bc.onclick = function() {
+        var body = document.querySelector("#body");
+        body.style.background = "#ccc";    
+    }
+    fc.onclick = function() {
+        var test = document.querySelector("#test");
+        test.style.color = "red";    
+    }
+    fs.onclick = function() {
+        var test2 = document.querySelector("#test");
+        console.log(parseInt(test2.style.fontSize)); /*숫자만 출력하게해줌 (문자가먼저오면안됨)*/
+        test2.style.fontSize = "4rem";    
+
+
+    }
+
+</script>

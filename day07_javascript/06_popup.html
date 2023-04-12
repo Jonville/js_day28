@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="popup()">팝업열기</button>
+
+
+</body>
+</html>
+
+<script>
+    function popup() {
+        var newPop = window.open("05_function04.html","","width=600 , height=450 , left=100 , top=100");      /* 팝업 */
+                    /* 열 팝업 창       , id ,    팝업 크기*/
+                    /*                  id 값 안주면 무한으로 새창열림 */
+        if(newPop == null){
+            alert("팝업해제 후 새로고침 해주세요.");
+        }
+    
+    }
+</script>

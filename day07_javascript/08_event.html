@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            width: 300px;
+            height: 300px;
+            margin: 10px auto;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        <img src="images/back1.jpg" id="img">
+    </div>
+
+</body>
+</html>
+
+<script>
+    var img = document.querySelector('#img');
+    img.onclick = function(event) {     /*이벤트 객체를 받아올수있음*/
+        console.log(event);
+        // alert("이벤트 타입 : " + event.type);   /*이벤트 형태*/
+        // alert("이벤트 발생위치 : " + event.pageX + "," + event.pageY);  /*클릭한 위치의 좌표*/
+        console.log(this.src);  /* 현재 파일의 경로*/
+    }
+
+</script>

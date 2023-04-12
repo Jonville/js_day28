@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello, javascript</title>
+</head>
+<body>
+    <div name = "test3" id="str">
+        이재승강사님
+        <span id="str2">재밌다!</span>
+    </div>
+
+    <ul>
+        <li id="test" name="test3">첫번째</li>
+        <li class="test2">두번째ㅋㅋ</li>
+        <li id="test">세번째ㅎㅎ</li>
+        <li class="test2">네번째^^</li>
+        <li class="test2">다섯번째...</li>
+    </ul>
+
+    <div id="innerTest"></div>
+
+</body>
+</html>
+
+<script>
+    var item = document.getElementById("test");    /*querySelector 보다 빠름 # 도 빼도됨*/
+    item.style.color = "blue";                   /*id 는 하나밖에 적용안됨*/
+
+    var item2 = document.getElementsByClassName("test2");   /*여러개일땐 반복문으로 돌려야함*/
+    for(var i = 0 ; i < item2.length; i++) {
+        item2[i].style.color = "red";
+    }
+
+    var item3 = document.getElementsByName("test3");     /*여러개일땐 반복문으로 돌려야함*/
+    for(var i = 0 ; i < item3.length; i++) {
+        item3[i].style.backgroundColor = "#ccc";
+        item3[i].style.fontSize = "2rem";
+    }
+
+    var title = document.title;
+    document.write(title);
+
+    var str = document.getElementById("str");
+    console.log(str.innerHTML); /* 태그는 태그로*/
+    str.innerHTML = "안녕" + "<br>" + "반갑습니다.";
+    console.log(str.innerText); /* 태그도 텍스트로 쳐버림*/
+    str.innerText = "안녕" + "<br>" + "반갑습니다.";
+
+    //innerTest 안에 '자바스크립트 노잼' 노잼 문구만 파란색으로 출력
+    var innerTest = document.getElementById("innerTest");
+    innerTest.innerHTML = "자바스크립트" + "<span style='color : blue;'> 노잼 </span>";
+
+</script>

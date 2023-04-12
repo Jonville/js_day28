@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            width: 300px;
+            margin: 10px auto;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        <img src="images/prod1.jpg" id="img">
+    </div>
+
+</body>
+</html>
+
+<script>
+    var img = document.querySelector('#img');
+    img.addEventListener("mouseover",changeImg);    /*마우스 올리면 , 함수를 실행*/
+    img.addEventListener("mouseout",changeImg2);    /*마우스 떼면 , 함수를 실행*/
+
+function changeImg() {
+    img.src="images/prod2.jpg";
+}
+
+function changeImg2() {
+    img.src="images/prod1.jpg";
+}
+    
+
+</script>

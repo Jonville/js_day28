@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid #ccc;
+            width: 150px;
+            text-align: center;
+            padding: 30px;
+            margin: auto;
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box" onclick="popup()">현재시간 보기</div>
+
+</body>
+</html>
+
+<script>
+    function popup() {
+        var newPop = window.open("ex02-1.html","","width=600 , height=450 , left=300 , top=300");      /* 팝업 */
+                    /* 열 팝업 창       , id ,    팝업 크기*/
+                    /*                  id 값 안주면 무한으로 새창열림 */
+        if(newPop == null){
+            alert("팝업해제 후 새로고침 해주세요.");
+        }
+    
+    }
+
+    console.log(screen.availWidth);     /* 실제 화면 너비값*/
+    console.log(screen.availHeight);    /* 실제 화면 높이값*/
+
+</script>
